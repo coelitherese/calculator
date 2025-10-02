@@ -8,7 +8,6 @@ function Display({ value }) {
       <input
         className="input"
         value={value}
-        placeholder="0"
         readOnly
       />
     </div>
@@ -100,9 +99,15 @@ export default function App() {
     setCurrentStep("first");
   };
 
+  // Handles "Surname" button click
+  const handleSurnameClick = () => {
+    setDisplay("Coeli Therese Brillante");
+    setCurrentStep("result");
+  }
+
   return (
     <>
-    <div className="creator">Brillante, Coeli Therese G.</div>
+    <div className="creator">Brillante, Coeli Therese - IT3B</div>
     <div className="container">
       <div className="calculator">
         <Display value={display} />
@@ -115,7 +120,7 @@ export default function App() {
           <Button label="4" onClick={() => handleNumberClick("4")} />
           <Button label="5" onClick={() => handleNumberClick("5")} />
           <Button label="6" onClick={() => handleNumberClick("6")} />
-          <Button label="ˣ" className='operator' onClick={() => handleOperatorClick("ˣ")} />
+          <Button label="x" className='operator' onClick={() => handleOperatorClick("x")} />
 
           <Button label="1" onClick={() => handleNumberClick("1")} />
           <Button label="2" onClick={() => handleNumberClick("2")} />
@@ -129,7 +134,9 @@ export default function App() {
         </div>
       </div>
     </div>
-    <div className="creator2">BSIT 3B</div>
+    <div className="surname-btn-wrapper">
+          <Button label="BRILLANTE" onClick={handleSurnameClick} className="brillante"/>
+        </div>
     </>
   );
 }
