@@ -77,10 +77,10 @@ export default function App() {
       const b = Number(secondNum);
       let res = "";
       switch (operator) {
-        case "/": res = b === 0 ? "Error" : (a / b).toString(); break;
+        case "÷": res = b === 0 ? "Error" : (a / b).toString(); break;
         case "-": res = (a - b).toString(); break;
         case "+": res = (a + b).toString(); break;
-        case "*": res = (a * b).toString(); break;
+        case "x": res = (a * b).toString(); break;
         default: res = "";
       }
       setResult(res);
