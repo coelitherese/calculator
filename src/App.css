@@ -2,10 +2,11 @@ body, html {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  display: flex;
 }
 
 body {
+  height: 100vh;
+  width: 100vw;
   background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/4cbf7788f3729aa54d22b9d24f907ef5728c7723-3840x2160.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -102,9 +103,11 @@ body {
 }
 
 .clear {
-  background: #8faabc;
+  
+
+  background: #dc96be;
   color: #fff;
-  border: 3px solid #8faabc;
+  border: 3px solid #dc96be;
 }
 
 .clear:hover {
@@ -115,10 +118,9 @@ body {
 }
 
 .equals {
-  background: #dc96be;
+  background: #8faabc;
   color: #fff;
-  border: 3px solid #dc96be;
-  
+  border: 3px solid #8faabc;
 }
 
 .equals:hover {
