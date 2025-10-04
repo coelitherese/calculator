@@ -126,7 +126,7 @@ export default function App() {
           <Button label="1" onClick={() => handleNumberClick("1")} />
           <Button label="2" onClick={() => handleNumberClick("2")} />
           <Button label="3" onClick={() => handleNumberClick("3")} />
-          <Button label="÷" className='operator' onClick={() => handleOperatorClick("÷")} />
+          <Button label="x" className='operator' onClick={() => handleOperatorClick("x")} />
 
           <Button label="C" className="clear" onClick={handleClearClick} />
           <Button label="0" onClick={() => handleNumberClick("0")} />
