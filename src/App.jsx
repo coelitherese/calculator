@@ -77,10 +77,10 @@ export default function App() {
       const b = Number(secondNum);
       let res = "";
       switch (operator) {
-        case "+": res = (a + b).toString(); break;
-        case "-": res = (a - b).toString(); break;
-        case "*": res = (a * b).toString(); break;
         case "/": res = b === 0 ? "Error" : (a / b).toString(); break;
+        case "-": res = (a - b).toString(); break;
+        case "+": res = (a + b).toString(); break;
+        case "*": res = (a * b).toString(); break;
         default: res = "";
       }
       setResult(res);
@@ -91,12 +91,12 @@ export default function App() {
 
   // Handles clear button click
   const handleClearClick = () => {
+    setCurrentStep("first");
     setFirstNum("");
     setOperator("");
     setSecondNum("");
     setResult("");
     setDisplay("");
-    setCurrentStep("first");
   };
 
   // Handles "Surname" button click
@@ -112,25 +112,27 @@ export default function App() {
       <div className="calculator">
         <Display value={display} />
         <div className="keypad">
+          
           <Button label="7" onClick={() => handleNumberClick("7")} />
           <Button label="8" onClick={() => handleNumberClick("8")} />
           <Button label="9" onClick={() => handleNumberClick("9")} />
-          <Button label="÷" className='operator' onClick={() => handleOperatorClick("÷")} />
+          <Button label="+" className='operator' onClick={() => handleOperatorClick("+")} />
 
           <Button label="4" onClick={() => handleNumberClick("4")} />
           <Button label="5" onClick={() => handleNumberClick("5")} />
           <Button label="6" onClick={() => handleNumberClick("6")} />
-          <Button label="x" className='operator' onClick={() => handleOperatorClick("x")} />
+          <Button label="-" className='operator' onClick={() => handleOperatorClick("-")} />
 
           <Button label="1" onClick={() => handleNumberClick("1")} />
           <Button label="2" onClick={() => handleNumberClick("2")} />
           <Button label="3" onClick={() => handleNumberClick("3")} />
-          <Button label="-" className='operator' onClick={() => handleOperatorClick("-")} />
+          <Button label="÷" className='operator' onClick={() => handleOperatorClick("÷")} />
 
           <Button label="C" className="clear" onClick={handleClearClick} />
           <Button label="0" onClick={() => handleNumberClick("0")} />
           <Button label="=" className='equals' onClick={handleEqualsClick} />
-          <Button label="+" className='operator' onClick={() => handleOperatorClick("+")} />
+          <Button label="÷" className='operator' onClick={() => handleOperatorClick("÷")} />
+
         </div>
       </div>
     </div>
